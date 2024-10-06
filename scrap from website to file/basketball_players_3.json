@@ -1,0 +1,116 @@
+[
+    {
+        "name": "Branden Carlson",
+        "position": "C",
+        "college": "Utah",
+        "salary(2024-2015)": ""
+    },
+    {
+        "name": "Jahmi'us Ramsey",
+        "position": "SG",
+        "college": "Texas Tech",
+        "salary(2024-2015)": ""
+    },
+    {
+        "name": "Jared Rhoden",
+        "position": "SG",
+        "college": "Seton Hall",
+        "salary(2024-2015)": ""
+    },
+    {
+        "name": "Jamison Battle",
+        "position": "SF",
+        "college": "George Washington, Minnesota, Ohio State",
+        "salary(2024-2015)": ""
+    },
+    {
+        "name": "Ulrich Chomche",
+        "position": "PF",
+        "college": "",
+        "salary(2024-2015)": ""
+    },
+    {
+        "name": "Immanuel Quickley",
+        "position": "PG",
+        "college": "Kentucky",
+        "salary(2024-2015)": "$32,500,000"
+    },
+    {
+        "name": "Garrett Temple",
+        "position": "SG",
+        "college": "LSU",
+        "salary(2024-2015)": "$2,087,519"
+    },
+    {
+        "name": "Jonathan Mogbo",
+        "position": "PF",
+        "college": "Missouri State, San Francisco",
+        "salary(2024-2015)": ""
+    },
+    {
+        "name": "Jamal Shead",
+        "position": "PG",
+        "college": "Houston",
+        "salary(2024-2015)": ""
+    },
+    {
+        "name": "Ja'Kobe Walter",
+        "position": "SG",
+        "college": "Baylor",
+        "salary(2024-2015)": "$3,465,000"
+    },
+    {
+        "name": "Davion Mitchell",
+        "position": "PG",
+        "college": "Auburn, Baylor",
+        "salary(2024-2015)": "$6,451,077"
+    },
+    {
+        "name": "Kelly Olynyk",
+        "position": "C",
+        "college": "Gonzaga",
+        "salary(2024-2015)": "$12,804,878"
+    },
+    {
+        "name": "Jakob Poeltl",
+        "position": "C",
+        "college": "Utah",
+        "salary(2024-2015)": "$19,500,000"
+    },
+    {
+        "name": "Bruce Brown",
+        "position": "PG",
+        "college": "Miami (FL)",
+        "salary(2024-2015)": "$23,000,000"
+    },
+    {
+        "name": "Gradey Dick",
+        "position": "SG",
+        "college": "Kansas",
+        "salary(2024-2015)": "$4,763,760"
+    },
+    {
+        "name": "RJ Barrett",
+        "position": "SG",
+        "college": "Duke",
+        "salary(2024-2015)": "$25,794,643"
+    },
+    {
+        "name": "Chris Boucher",
+        "position": "PF",
+        "college": "Oregon",
+        "salary(2024-2015)": "$10,810,000"
+    },
+    {
+        "name": "Ochai Agbaji",
+        "position": "SG",
+        "college": "Kansas",
+        "salary(2024-2015)": "$4,310,280"
+    },
+    {
+        "name": "Scottie Barnes",
+        "position": "SF",
+        "college": "Florida State",
+        "salary(2024-2015)": "$10,130,980"
+    }
+]

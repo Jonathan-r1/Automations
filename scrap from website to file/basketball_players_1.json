@@ -1,0 +1,116 @@
+[
+    {
+        "name": "Branden Carlson",
+        "position": "C",
+        "college": "Utah",
+        "salary": ""
+    },
+    {
+        "name": "Jahmi'us Ramsey",
+        "position": "SG",
+        "college": "Texas Tech",
+        "salary": ""
+    },
+    {
+        "name": "Jared Rhoden",
+        "position": "SG",
+        "college": "Seton Hall",
+        "salary": ""
+    },
+    {
+        "name": "Jamison Battle",
+        "position": "SF",
+        "college": "George Washington, Minnesota, Ohio State",
+        "salary": ""
+    },
+    {
+        "name": "Ulrich Chomche",
+        "position": "PF",
+        "college": "",
+        "salary": ""
+    },
+    {
+        "name": "Immanuel Quickley",
+        "position": "PG",
+        "college": "Kentucky",
+        "salary": "$130,000,000"
+    },
+    {
+        "name": "Garrett Temple",
+        "position": "SG",
+        "college": "LSU",
+        "salary": "$2,087,519"
+    },
+    {
+        "name": "Jonathan Mogbo",
+        "position": "PF",
+        "college": "Missouri State, San Francisco",
+        "salary": ""
+    },
+    {
+        "name": "Jamal Shead",
+        "position": "PG",
+        "college": "Houston",
+        "salary": ""
+    },
+    {
+        "name": "Ja'Kobe Walter",
+        "position": "SG",
+        "college": "Baylor",
+        "salary": "$7,103,160"
+    },
+    {
+        "name": "Davion Mitchell",
+        "position": "PG",
+        "college": "Auburn, Baylor",
+        "salary": "$6,451,077"
+    },
+    {
+        "name": "Kelly Olynyk",
+        "position": "C",
+        "college": "Gonzaga",
+        "salary": "$26,250,000"
+    },
+    {
+        "name": "Jakob Poeltl",
+        "position": "C",
+        "college": "Utah",
+        "salary": "$39,000,000"
+    },
+    {
+        "name": "Bruce Brown",
+        "position": "PG",
+        "college": "Miami (FL)",
+        "salary": "$23,000,000"
+    },
+    {
+        "name": "Gradey Dick",
+        "position": "SG",
+        "college": "Kansas",
+        "salary": "$4,763,760"
+    },
+    {
+        "name": "RJ Barrett",
+        "position": "SG",
+        "college": "Duke",
+        "salary": "$83,116,071"
+    },
+    {
+        "name": "Chris Boucher",
+        "position": "PF",
+        "college": "Oregon",
+        "salary": "$10,810,000"
+    },
+    {
+        "name": "Ochai Agbaji",
+        "position": "SG",
+        "college": "Kansas",
+        "salary": "$4,310,280"
+    },
+    {
+        "name": "Scottie Barnes",
+        "position": "SF",
+        "college": "Florida State",
+        "salary": "$234,369,130"
+    }
+]
