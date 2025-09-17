@@ -1,36 +1,36 @@
-import os  # Import os module for environment variables
+import os  # Import os 
 import requests
 from smtplib import SMTP
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
 from io import BytesIO
-from dotenv import load_dotenv  # Import load_dotenv from python-dotenv
+from dotenv import load_dotenv  
 
-# Load environment variables from .env file
+#  from .env file
 load_dotenv()
 
-# Constants needed
-GIF_API_KEY = os.getenv('GIF_API_KEY')  # Get Giphy API key from environment variable
-API_KEY = os.getenv('API_KEY')  # Get OpenWeatherMap API key from environment variable
-EMAIL_ADDRESS = os.getenv('EMAIL_ADDRESS')  # Get sender's email address from environment variable
-EMAIL_PSWRD = os.getenv('EMAIL_PASSWORD')  # Get sender's email password from environment variable
-RECIPIENT_EMAIL = os.getenv('RECIPIENT_EMAIL')  # Get recipient's email address from environment variable
-LOCATION = os.getenv('LOCATION')  # Get location for weather data from environment variable
+#get from .env file
+GIF_API_KEY = os.getenv('GIF_API_KEY')  
+API_KEY = os.getenv('API_KEY') 
+EMAIL_ADDRESS = os.getenv('EMAIL_ADDRESS') 
+EMAIL_PSWRD = os.getenv('EMAIL_PASSWORD')  
+RECIPIENT_EMAIL = os.getenv('RECIPIENT_EMAIL')  
+LOCATION = os.getenv('LOCATION')  
 
 def get_weather_data(api_key, location):
-   # """Fetches the current weather data for the specified location."""
+   # get weather data
     url = f"http://api.openweathermap.org/data/2.5/weather?q={location}&appid={api_key}&units=metric"
     response = requests.get(url)  # Send a GET request to the weather API
-    return response.json()  # Return the response as a JSON object
+    return response.json()  
 
 def generate_alert(weather_data):
-   # """Generates a weather alert message based on the weather data."""
-    weather_condition = weather_data['weather'][0]['main']  # Get the main weather condition
-    temperature = weather_data['main']['temp']  # Get the current temperature
-    wind_speed = weather_data['wind']['speed']  # Get the wind speed
+   # generate weather alert
+    weather_condition = weather_data['weather'][0]['main'] 
+    temperature = weather_data['main']['temp']  
+    wind_speed = weather_data['wind']['speed']  
 
-    # Create the alert message with the weather details
+    # Create the alert message 
     alert_message = f"Weather update for Toronto: \n"
     alert_message += f"Current temperature: {temperature}°C\n"
     alert_message += f"Condition: {weather_condition.capitalize()}\n"
@@ -48,32 +48,32 @@ def generate_alert(weather_data):
     return alert_message  # Return the composed alert message
 
 def get_random_gif(api_key=GIF_API_KEY, tag="weather"):
-    #"""Fetches a random GIF from Giphy based on a specified tag."""
+    #fetch a random GIF from Giphy 
     gif_url = f"https://api.giphy.com/v1/gifs/random?api_key={api_key}&tag={tag}&rating=g"  # Giphy API URL
     response = requests.get(gif_url)  # Send a GET request to fetch the GIF
-    gif_data = response.json()  # Parse the JSON response
-    return gif_data['data']['images']['original']['url']  # Return the original URL of the GIF
+    gif_data = response.json() 
+    return gif_data['data']['images']['original']['url']  
 
 def send_email(subject, message, gif_url):
-  #  """Sends an email with the specified subject, message, and GIF."""
-    msg = MIMEMultipart()  # Create a multipart email message
-    msg['From'] = EMAIL_ADDRESS  # Set the sender's email address
-    msg['To'] = RECIPIENT_EMAIL  # Set the recipient's email address
-    msg['Subject'] = subject  # Set the email subject
-    msg.attach(MIMEText(message, 'plain'))  # Attach the message text
+  #  sends an email with the specified subject, message, and GIF
+    msg = MIMEMultipart()  
+    msg['From'] = EMAIL_ADDRESS  
+    msg['To'] = RECIPIENT_EMAIL 
+    msg['Subject'] = subject  
+    msg.attach(MIMEText(message, 'plain')) 
 
     # Fetch the GIF image data
-    gif_response = requests.get(gif_url)  # Send a GET request to fetch the GIF
+    gif_response = requests.get(gif_url)  
     if gif_response.status_code == 200:  # Check if the GIF was retrieved successfully
         gif_image = MIMEImage(gif_response.content)  # Create a MIMEImage object with the GIF content
-        gif_image.add_header('Content-ID', '<gif>')  # Add a header for the GIF
-        msg.attach(gif_image)  # Attach the GIF to the email message
+        gif_image.add_header('Content-ID', '<gif>')  
+        msg.attach(gif_image)  
 
     # Set up the SMTP server for sending the email
     server = SMTP('smtp.gmail.com', 587)  # Create an SMTP server object
-    server.starttls()  # Start TLS for secure communication
-    server.login(EMAIL_ADDRESS, EMAIL_PSWRD)  # Log in to the email account
-    server.send_message(msg)  # Send the email message
+    server.starttls()  
+    server.login(EMAIL_ADDRESS, EMAIL_PSWRD)  
+    server.send_message(msg)  
     server.quit()  # Close the server connection
 
 # Main logic
